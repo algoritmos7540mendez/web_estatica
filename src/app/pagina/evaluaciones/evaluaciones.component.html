@@ -1,0 +1,62 @@
+<div class="section section-evaluaciones" id="evaluaciones">
+  <div class="container">
+    <h3>Evaluaciones</h3>
+    <br>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 ml-auto mr-auto text-center">
+        <div class="card card-login">
+          <div class="card-header card-header-primary text-center">
+            <h4 class="card-title">Parciales</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <th>Fecha</th>
+                  <th>Enunciado</th>
+                  <th>Solución</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let parcial of parciales">
+                    <td>{{ parcial.nombre }}</td>
+                    <td><a href="{{ parcial.url }}" target="_blank" class="btn btn-rose btn-sm" >Descargar</a></td>
+                    <td><a href="{{ parcial.resoUrl }}" target="_blank" class="btn btn-rose btn-sm" *ngIf="parcial.tieneReso">Descargar</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="footer text-center">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 ml-auto mr-auto text-center">
+        <div class="card card-login">
+          <div class="card-header card-header-primary text-center">
+            <h4 class="card-title">Finales</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <th>Fecha</th>
+                  <th>Enunciado</th>
+                  <th>Solución</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let final of finales">
+                    <td>{{ final.nombre }}</td>
+                    <td><a href="{{ final.url }}" target="_blank" class="btn btn-rose btn-sm">Descargar</a></td>
+                    <td><a href="{{ final.resoUrl }}" target="_blank" class="btn btn-rose btn-sm" *ngIf="final.tieneReso">Descargar</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="footer text-center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="section section-tabs" id="material">
+	<div class="container">
+	<!--                nav tabs               -->
+		<div id="nav-tabs">
+			<h3>Material</h3>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 ml-auto mr-auto text-center">
+					<div class="card card-login">
+						<div class="card-header card-header-primary text-center">
+							<h4 class="card-title">Apuntes</h4>
+						</div>
+						<div class="card-body">
+							<table class="table table-responsive-sm">
+								<tbody>
+									<tr *ngFor="let apunte of apuntes">
+										<td>{{ apunte.nombre | titlecase }}</td>
+										<td><a href="{{ apunte.url }}" target="_blank" class="btn btn-rose btn-sm" >Descargar</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+							<div class="footer text-center">
+							</div>
+						</div>
+				</div>
+				<div class="col-lg-6 col-md-6 ml-auto mr-auto text-center">
+					<div class="card card-login">
+						<div class="card-header card-header-primary text-center">
+							<h4 class="card-title">Clases</h4>
+						</div>
+						<div class="card-body">
+							<table class="table table-responsive-sm">
+								<tbody>
+									<tr *ngFor="let clase of clases">
+										<td>{{ clase.nombre | titlecase }}</td>
+										<td><a href="{{ clase.url }}" target="_blank" class="btn btn-rose btn-sm">Descargar</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="footer text-center">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

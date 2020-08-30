@@ -1,0 +1,36 @@
+<div class="section section-cronograma" id="cronograma">
+  <div class="container">
+    <h3>Cronograma</h3>
+    <h4><strong>Atención:</strong> El siguiente cronograma es <strong>tentativo</strong> y podrá sufrir cambios.</h4>
+    <h4><small>Puede descargar la versión en pdf desde <a href="{{ cronogramaURL }}" target="_blank" >acá</a></small></h4>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <th>Semana</th>
+          <th colspan="2">Teórica</th>
+          <th colspan="2">Práctica</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let semana of cronograma">
+            <td>{{ semana.semana }}</td>
+            <td>{{ semana.fechaTeorica }}</td>
+            <td>
+              <ul>
+                <li *ngFor="let clase of semana.temasTeorica" [ngClass]="{'strong':clase.destacar}">{{clase.tema}}</li>
+              </ul>
+            </td>
+            <td>{{ semana.fechaPractica }}</td>
+            <td>
+              <ul>
+                <li *ngFor="let clase of semana.temasPractica" [ngClass]="{'strong':clase.destacar}">{{clase.tema}}</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5" class="strong text-center">* El 2do recuperatorio del parcial se tomará junto con la 1ra fecha de final.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

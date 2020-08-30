@@ -1,0 +1,15 @@
+<div class="section section-tabs" id="docentes">
+  <div class="container">
+    <div id="nav-tabs">
+      <h3>Docentes</h3>
+      <div class="row" *ngFor="let fil of [0,1,2,3,4]">
+        <div class="col-sm-2 ml-auto text-center" *ngFor="let col of [0,1,2,3]">
+          <div *ngIf="fil*4 + col < docentes.length">
+            <img src="./assets/img/docentes/{{ docentes[fil*4 + col].imagen }}" alt="{{ docentes[fil*4 + col].nombre }} {{ docentes[fil*4 + col].apellido}}" class="img-raised rounded-circle img-fluid">
+            <h4>{{ docentes[fil*4 + col].nombre}} {{ docentes[fil*4 + col].apellido}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
